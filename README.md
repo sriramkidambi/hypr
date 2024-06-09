@@ -1,9 +1,12 @@
-# HyprV4
-Welcome to the fourth version of the Hyprland installation script. This script is designed to streamline the setup of Hyprland on a brand-new, clean installation of Arch Linux, specifically on physical hardware.
+# Hypr
+This is new version of the Hyprland install script
 
-For those who prefer a more hands-on approach, you have the option to manually fetch the dot config files and install the necessary packages. Instructions are provided below for your convenience.
+It contains a collection of dot config files for hyprland with a simple install script.
+IMPORTANT - This script is meant to run on a clean fresh Arch install on physical hardware
 
-If your system requires Nvidia support, make sure to execute the following steps prior to beginning the installation process:
+You can grab the config files and install packages by hand with the command listed below
+
+Do this ONLY if you need Nvidia support (do this first)
 ```
 yay -S linux-headers nvidia-dkms qt5-wayland qt5ct libva libva-nvidia-driver-git
 
@@ -24,7 +27,7 @@ verify
 ```
 cat /etc/modprobe.d/nvidia.conf
 ```
-shoud return: 
+shoud return:
 ```
 options nvidia-drm modeset=1
 ```
@@ -41,7 +44,7 @@ wofi wlogout xdg-desktop-portal-hyprland swappy grim slurp thunar \
 polkit-gnome python-requests pamixer pavucontrol brightnessctl bluez \
 bluez-utils blueman network-manager-applet gvfs thunar-archive-plugin \
 file-roller btop pacman-contrib starship ttf-jetbrains-mono-nerd \
-noto-fonts-emoji lxappearance xfce4-settings sddm-git sddm-sugar-candy-git 
+noto-fonts-emoji lxappearance xfce4-settings sddm-git sddm-sugar-candy-git
 ```
 
-Alternatively, for a hassle-free installation, utilize the included "set-hypr" script. This will efficiently handle the entire setup process for you.
+Or you can use the attached script "set-hypr" to install everything for you.
